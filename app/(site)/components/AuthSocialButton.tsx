@@ -14,7 +14,7 @@ const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
       type="button"
       onClick={onClick}
       className="
-        inline-flx
+        inline-flex
         w-full
         justify-center
         rounded-md
