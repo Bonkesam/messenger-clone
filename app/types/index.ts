@@ -5,7 +5,7 @@ export type FullmessageType = Message & {
     seen: User[]
 };
 
-export type FullConversationType = conversation & {
+export type FullConversationType = Conversation & {
     users: User[],
     messages: FullmessageType[],
 };
