@@ -12,13 +12,20 @@ import Avatar from "@/app/components/Avatar";
 import AvatarGroup from "@/app/components/AvatarGroup";
 
 interface ConversationBoxProps {
-    data: FullConversationType,
-    selected?: boolean;
+  data: Conversation & {
+    users: User[];
+    messages: (Message & {
+      sender: User,
+      seen: User[],
+    })[]
+  },
+  selected?: boolean;
 }
 
 const ConversationBox: React.FC<ConversationBoxProps> = ({
     data,
     selected,
+    
 }) => {
     const otherUser= useOtherUser(data);
     const session = useSession();
